@@ -14,7 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('loginhome');
 });
 
 Route::get('/login', [App\Http\Controllers\loginController::class, 'login'])->name('login');
+Route::get('/suphome', function () {
+    return view('suphome');
+});
+
+Route::get('/userhome', function () {
+    return view('userhome');
+});
+Route::get('/manahome', function () {
+    return view('managerhome');
+});
