@@ -14,19 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('loginhome');
+    return view('welcome');
 });
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/connect', [App\Http\Controllers\HomeController::class, 'index'])->name('connect');
-Route::get('/manahome', function () {
-    return view('managerhome');
-});
-Route::get('/suphome', function () {
-    return view('suphome');
-});
-Route::get('/userhome', function () {
-    return view('userhome');
-});
+Route::get('/login', [App\Http\Controllers\loginController::class, 'login'])->name('login');
