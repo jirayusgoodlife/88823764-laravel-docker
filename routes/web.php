@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('loginhome');
 });
+
+Route::view('/test' , 'loginhome');
 
 Route::get('/login', [App\Http\Controllers\loginController::class, 'login'])->name('login');
 Route::get('/suphome', function () {
